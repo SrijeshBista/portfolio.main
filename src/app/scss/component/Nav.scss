@@ -1,31 +1,143 @@
 header {
+  position: relative;
+  position: fixed;
+  width: 100%;
+  background: transparent;
   nav {
+    // overflow: hidden;
     .nav-main {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .logo{
-          width: 130px;
-            img{
-                width: 100%;
-            }
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logo {
+        width: 100px;
+        img {
+          width: 100%;
         }
-        .hamburger{
+      }
+      .hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+        .nav-btn {
+          /* From Uiverse.io by mobinkakei */
+          .btn {
+            width: 175px;
+            height: 45px;
+            background: linear-gradient(to top, #00154c, #12376e, #23487f);
+            color: #fff;
+            border-radius: 50px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+          }
+
+          .btn span {
+            font-size: 16.5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: top 0.5s;
+            font-weight: 600;
+            font-family: $primary-font;
+          }
+
+          .btn-text-one {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+          }
+
+          .btn-text-two {
+            position: absolute;
+            width: 100%;
+            top: 150%;
+            left: 0;
+            transform: translateY(-50%);
+          }
+
+          .btn:hover .btn-text-one {
+            top: -100%;
+          }
+
+          .btn:hover .btn-text-two {
+            top: 50%;
+          }
+        }
+        .icon {
+          button {
             font-size: 2.5rem;
             cursor: pointer;
+            border: none;
+            background: transparent;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .nav-inside {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #1f1e1e;
+    transition: transform 0.4s ease-in-out;
+    transform: translateX(100%);
 
+    ul {
+    //   width: 100%;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+      text-align: center;
+      margin-top:7.5%;
+      li {
+        list-style: none;
+        margin: 20px 25px;
+        font-size: 4rem;
+        font-weight: 600;
+        transition: transform 0.3s ease, color 0.3s ease;
+        font-family: $primary-font;
+        a {
+          text-decoration: none;
+          color: #fff;
+          &:hover{
+              color: #b3b0b0;
+              
+          }
         }
-        .nav-bar{
-            border: 2px solid red;
-            ul{
-                li{
-                    list-style: none;
-                    display:inline-block;
-                    margin:0px  25px;
-                    font-size: 19px;
-                }
-            }
-        }
+       
+      }
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 70px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        color: #ff4040;
+      }
+    }
+
+    &.active {
+      transform: translateX(0);
     }
   }
 }
