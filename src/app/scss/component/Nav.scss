@@ -2,7 +2,8 @@ header {
   position: relative;
   position: fixed;
   width: 100%;
-  background: transparent;
+  margin-top: -8px;
+  background-color: #fff;
   nav {
     // overflow: hidden;
     .nav-main {
@@ -75,7 +76,7 @@ header {
             cursor: pointer;
             border: none;
             background: transparent;
-            color: #fff;
+            // color: #fff;
           }
         }
       }
