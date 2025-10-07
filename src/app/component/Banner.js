@@ -26,6 +26,7 @@ const Banner = () => {
           </div>
         </div>
       </section>
+      <section></section>
     </>
   );
 };

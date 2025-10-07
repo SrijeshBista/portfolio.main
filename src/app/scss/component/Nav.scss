@@ -88,12 +88,12 @@ header {
     position: fixed;
     top: 0;
     right: 0;
-    background-color: #1f1e1e;
+    background-color: #FF6F00;
     transition: transform 0.4s ease-in-out;
     transform: translateX(100%);
-
+    z-index: 200;
     ul {
-    //   width: 100%;
+      //   width: 100%;
       padding: 0;
       margin: 0;
       display: flex;
@@ -101,7 +101,7 @@ header {
       gap: 20px;
       position: relative;
       text-align: center;
-      margin-top:7.5%;
+      margin-top: 7.5%;
       li {
         list-style: none;
         margin: 20px 25px;
@@ -112,12 +112,11 @@ header {
         a {
           text-decoration: none;
           color: #fff;
-          &:hover{
-              color: #b3b0b0;
-              
+          &:hover {
+            color: #000;
+            transition: 300ms ease-in-out;
           }
         }
-       
       }
     }
 
@@ -133,7 +132,7 @@ header {
       transition: 0.3s;
 
       &:hover {
-        color: #ff4040;
+        // color: #ff4040;
       }
     }
 
@@ -142,3 +141,71 @@ header {
     }
   }
 }
+// SIDENAVE SCSS
+#sidebar {
+  background: transparent;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-right: 10px;
+  height: 100vh;
+  text-align: center;
+  // border: 1px solid black;
+
+  .sidemain {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 30%;
+    right: -7px;
+    gap: 25px;
+// border: 1px solid black;
+    .social-media {
+      position: relative;
+
+      button {
+        border: none;
+        background-color: transparent;
+        // display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        // z-index: -1000;
+        a {
+          font-size: 2.2rem;
+          color: #000;
+          transition: color 0.3s ease;
+          z-index: -2;
+        }
+
+        p {
+          opacity: 0;
+          transform: translateX(30px);
+          color: #000;
+          font-size: 14px;
+          font-weight: 500;
+          margin: 0;
+          transition: all 0.4s ease;
+          text-decoration: none;
+          list-style: none;
+          
+        }
+
+        &:hover p {
+          opacity: 1;
+          transform: translateX(0);
+          
+        }
+
+        &:hover a {
+          color: #4e4c4c;
+          
+        }
+      }
+    }
+  }
+}
+
