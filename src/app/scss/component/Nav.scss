@@ -1,28 +1,30 @@
 header {
-  position: relative;
   position: fixed;
   width: 100%;
   margin-top: -8px;
   background-color: #fff;
+  z-index: 100;
+
   nav {
-    // overflow: hidden;
     .nav-main {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       .logo {
         width: 100px;
         img {
           width: 100%;
         }
       }
+
       .hamburger {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 50px;
+
         .nav-btn {
-          /* From Uiverse.io by mobinkakei */
           .btn {
             width: 175px;
             height: 45px;
@@ -30,78 +32,78 @@ header {
             color: #fff;
             border-radius: 50px;
             border: none;
-            outline: none;
             cursor: pointer;
             position: relative;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
             overflow: hidden;
-          }
 
-          .btn span {
-            font-size: 16.5px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: top 0.5s;
-            font-weight: 600;
-            font-family: $primary-font;
-          }
+            span {
+              font-size: 16.5px;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              font-weight: 600;
+              font-family: $primary-font;
+              transition: top 0.5s;
+            }
 
-          .btn-text-one {
-            position: absolute;
-            width: 100%;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-          }
+            .btn-text-one {
+              position: absolute;
+              width: 100%;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+            }
 
-          .btn-text-two {
-            position: absolute;
-            width: 100%;
-            top: 150%;
-            left: 0;
-            transform: translateY(-50%);
-          }
+            .btn-text-two {
+              position: absolute;
+              width: 100%;
+              top: 150%;
+              left: 0;
+              transform: translateY(-50%);
+            }
 
-          .btn:hover .btn-text-one {
-            top: -100%;
-          }
+            &:hover .btn-text-one {
+              top: -100%;
+            }
 
-          .btn:hover .btn-text-two {
-            top: 50%;
+            &:hover .btn-text-two {
+              top: 50%;
+            }
           }
         }
+
         .icon {
           button {
             font-size: 2.5rem;
             cursor: pointer;
             border: none;
             background: transparent;
-            // color: #fff;
           }
         }
       }
     }
   }
+
   .nav-inside {
     width: 100%;
     height: 100vh;
     position: fixed;
     top: 0;
     right: 0;
-    background-color: #FF6F00;
+    background-color: #ff6f00;
     transition: transform 0.4s ease-in-out;
     transform: translateX(100%);
     z-index: 200;
+
     ul {
-      //   width: 100%;
       padding: 0;
       margin: 0;
       display: flex;
       flex-direction: column;
       gap: 20px;
-      position: relative;
       text-align: center;
       margin-top: 7.5%;
+
       li {
         list-style: none;
         margin: 20px 25px;
@@ -109,12 +111,15 @@ header {
         font-weight: 600;
         transition: transform 0.3s ease, color 0.3s ease;
         font-family: $primary-font;
+
         a {
-          text-decoration: none;
+          text-decoration: none; // remove underline
           color: #fff;
+
           &:hover {
             color: #000;
             transition: 300ms ease-in-out;
+            text-decoration: none; // ensure no underline on hover
           }
         }
       }
@@ -130,18 +135,20 @@ header {
       font-size: 70px;
       cursor: pointer;
       transition: 0.3s;
-
-      &:hover {
-        // color: #ff4040;
-      }
     }
 
     &.active {
       transform: translateX(0);
+
+      // hide sidebar when menu is open
+      + #sidebar {
+        display: none;
+      }
     }
   }
 }
-// SIDENAVE SCSS
+
+// SIDEBAR
 #sidebar {
   background: transparent;
   position: fixed;
@@ -150,7 +157,7 @@ header {
   margin-right: 10px;
   height: 100vh;
   text-align: center;
-  // border: 1px solid black;
+  z-index: 50;
 
   .sidemain {
     display: flex;
@@ -160,25 +167,24 @@ header {
     top: 30%;
     right: -7px;
     gap: 25px;
-// border: 1px solid black;
+
     .social-media {
       position: relative;
 
       button {
         border: none;
         background-color: transparent;
-        // display: flex;
         align-items: center;
         gap: 8px;
         cursor: pointer;
         position: relative;
         overflow: hidden;
-        // z-index: -1000;
+
         a {
           font-size: 2.2rem;
           color: #000;
           transition: color 0.3s ease;
-          z-index: -2;
+          text-decoration: none;
         }
 
         p {
@@ -189,23 +195,32 @@ header {
           font-weight: 500;
           margin: 0;
           transition: all 0.4s ease;
-          text-decoration: none;
-          list-style: none;
-          
         }
 
         &:hover p {
           opacity: 1;
           transform: translateX(0);
-          
         }
 
         &:hover a {
           color: #4e4c4c;
-          
         }
+      }
+      .git:hover a {
+        color: #333333; // GitHub gray-black
+      }
+
+      .fb:hover a {
+        color: #1877f2; // Facebook blue
+      }
+
+      .linkdin:hover a {
+        color: #0a66c2; // LinkedIn blue
+      }
+
+      .ig:hover a {
+        color: #e1306c; // Instagram pink-red
       }
     }
   }
 }
-

@@ -9,6 +9,11 @@ const Nav = () => {
   const hamburgeropen = () => sethamopen(true);
   const hamburgerclose = () => sethamopen(false);
 
+  // 👇 Close hamburger when a nav link is clicked
+  const handleNavClick = () => {
+    sethamopen(false);
+  };
+
   return (
     <>
       <header>
@@ -42,15 +47,31 @@ const Nav = () => {
           <button className="close-btn" onClick={hamburgerclose}>
             <IoClose />
           </button>
+
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Project</a></li>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Contact Me</a></li>
+            <li>
+              <a href="#banner" onClick={handleNavClick}>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#project" onClick={handleNavClick}>
+                Project
+              </a>
+            </li>
+            <li>
+              <a href="#about" onClick={handleNavClick}>
+                About Me
+              </a>
+            </li>
+            <li>
+              <a href="#contact" onClick={handleNavClick}>
+                Contact Me
+              </a>
+            </li>
           </ul>
         </div>
       </header>
-     
     </>
   );
 };

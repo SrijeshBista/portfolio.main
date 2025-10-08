@@ -6,7 +6,7 @@ const Banner = () => {
       <section id="banner">
         <div className="nav-container">
           <div className="banner-main">
-            <div className="bg">d</div>
+            <div className="bg">  </div>
             {/* left side of banner  */}
             <div className="banner-left">
               <div className="Name">
@@ -26,7 +26,7 @@ const Banner = () => {
           </div>
         </div>
       </section>
-      <section></section>
+    
     </>
   );
 };
