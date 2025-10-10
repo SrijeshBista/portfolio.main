@@ -9,7 +9,7 @@ const Banner = () => {
             <div className="bg">  </div>
             {/* left side of banner  */}
             <div className="banner-left">
-              <div className="Name">
+              <div className="Name" data-aos="fade-right">
                 <h1>SRIJESH BISTA </h1>
               </div>
               <hr />
@@ -20,7 +20,7 @@ const Banner = () => {
             
             </div>
             {/* right side of banner  */}
-            <div className="banner-right">
+            <div className="banner-right" >
               <img src="../sreijesh.png" />
             </div>
           </div>
