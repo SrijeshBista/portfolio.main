@@ -1,0 +1,45 @@
+#contact {
+  height: fit-content;
+  .contact-main {
+    background-image: url("https://i.gifer.com/1Zvm.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    border-radius: 24px;
+    padding: 10px 20px;
+    color: #fff;
+    font-family: $secondary-font;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .text {
+      // transform: translate(42%,40%);
+      width: 60%;
+      text-align: center;
+      h1 {
+        font-size: 5.2rem;
+      }
+    }
+    .icon {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      p{
+        margin-right: 10px;
+        font-size: 20px;
+      }
+      .social-media {
+        button {
+          border: none;
+          background: transparent;
+          a{
+            font-size: 30px;
+            color: #000;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

@@ -25,11 +25,17 @@ header {
         gap: 50px;
 
         .nav-btn {
+          button{
+            a{
+              color: #fff;
+              text-decoration: none;
+            }
+          }
           .btn {
             width: 175px;
             height: 45px;
             background: linear-gradient(to top, #00154c, #12376e, #23487f);
-            color: #fff;
+          
             border-radius: 50px;
             border: none;
             cursor: pointer;
@@ -102,16 +108,16 @@ header {
       flex-direction: column;
       gap: 20px;
       text-align: center;
-      margin-top: 7.5%;
+      margin-top: 5%;
 
       li {
         list-style: none;
-        margin: 20px 25px;
+        margin: 15px 25px;
         font-size: 4rem;
         font-weight: 600;
         transition: transform 0.3s ease, color 0.3s ease;
         font-family: $primary-font;
-
+        cursor: pointer;
         a {
           text-decoration: none; // remove underline
           color: #fff;
@@ -170,7 +176,27 @@ header {
 
     .social-media {
       position: relative;
+      .git {
+        a {
+          color: #333333;
+        }
+      }
+      .fb {
+        a {
+          color: #1877f2;
+        }
+      }
+      .linkdin {
+        a {
+          color: #0a66c2;
+        }
+      }
 
+      .ig {
+        a {
+          color: #e1306c;
+        }
+      }
       button {
         border: none;
         background-color: transparent;
@@ -190,7 +216,7 @@ header {
         p {
           opacity: 0;
           transform: translateX(30px);
-          color: #000;
+          color: #666363;
           font-size: 14px;
           font-weight: 500;
           margin: 0;

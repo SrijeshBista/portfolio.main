@@ -1,8 +1,40 @@
-#aboutme{
-    // height: fit-content;
-    .about-main{
-        border: 2px solid black;
-        background-color: #000;
-        color: #fff;
+#aboutme {
+  height: fit-content;
+  .about-main {
+    height: 75vh;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    padding: 20px 30px;
+    border-radius: 30px;
+    .left-side {
+      width: 60%;
+      h1 {
+        font-size: 6rem;
+        margin: 0 0 40px 0;
+        font-family: $secondary-font;
+      }
+      p {
+        font-weight: 500;
+        font-size: 1.9rem;
+        font-family: $primary-font;
+       
+      }
     }
+    .right-side {
+      width: 35%;
+      // border: 1px solid red;
+      // height: 100%;
+      margin-top: 69px;
+      margin-right: -2%;
+
+      img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+    }
+  }
 }

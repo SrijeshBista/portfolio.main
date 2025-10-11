@@ -9,8 +9,12 @@ const Nav = () => {
   const hamburgeropen = () => sethamopen(true);
   const hamburgerclose = () => sethamopen(false);
 
-  // 👇 Close hamburger when a nav link is clicked
-  const handleNavClick = () => {
+  // Smooth scroll to section and close hamburger
+  const handleScroll = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
     sethamopen(false);
   };
 
@@ -27,8 +31,10 @@ const Nav = () => {
               <div className="hamburger">
                 <div className="nav-btn">
                   <button className="btn">
-                    <span className="btn-text-one">Get In Touch</span>
-                    <span className="btn-text-two">Now!</span>
+                    <a onClick={() => handleScroll("contact")}>
+                      <span className="btn-text-one">Get In Touch</span>
+                      <span className="btn-text-two">Now!</span>
+                    </a>
                   </button>
                 </div>
 
@@ -50,24 +56,23 @@ const Nav = () => {
 
           <ul>
             <li>
-              <a href="#banner" onClick={handleNavClick}>
-                Home
-              </a>
+              <a onClick={() => handleScroll("banner")}>Home</a>
             </li>
+
             <li>
-              <a href="#project" onClick={handleNavClick}>
-                Project
-              </a>
+              <a onClick={() => handleScroll("aboutme")}>About</a>
             </li>
+
             <li>
-              <a href="#about" onClick={handleNavClick}>
-                About Me
-              </a>
+              <a onClick={() => handleScroll("Techiwork")}>Skill</a>
             </li>
+
             <li>
-              <a href="#contact" onClick={handleNavClick}>
-                Contact Me
-              </a>
+              <a onClick={() => handleScroll("Project")}>Project</a>
+            </li>
+
+            <li>
+              <a onClick={() => handleScroll("contact")}>Contact</a>
             </li>
           </ul>
         </div>
