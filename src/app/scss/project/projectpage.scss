@@ -1,3 +1,221 @@
-#product-page{
-    padding-top: 8%;
+#project-page {
+  padding-top: 8%;
+  padding-bottom: 3%;
+  height: fit-content;
+  .titles{
+    font-size: 2.8rem;
+    h1{
+        margin: 0;
+        margin-bottom: 10px;
+        font-family: $secondary-font;
+    }
+  }
+  .mainproject {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    a {
+      text-decoration: none;
+    }
+    .project-detail {
+      width: calc(28.333% - 20px); // 3 per row with gap
+
+      border: 1px solid black;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+
+      cursor: pointer;
+      padding: 20px;
+      text-align: center;
+
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+
+        img {
+          width: 100%;
+          height: 260px;
+          object-fit: cover;
+          border-radius: 12px;
+        }
+
+        .project-title {
+          font-size: 2.5rem;
+          font-weight: 600;
+          margin-top: 8px;
+          margin: 0;
+          color: #000;
+          font-family: $primary-font;
+          font-weight: 700;
+        }
+
+        .project-des {
+          font-size: 1.4rem;
+          color: #000;
+          margin: 0;
+          font-family: $secondary-font;
+        }
+
+        .project-btn {
+          color: #000;
+          border: 1px solid black;
+          padding: 10px 20px;
+          border-radius: 12px;
+          font-weight: 600;
+          margin-top: 10px;
+          transition: all 400ms ease-in-out;
+          color: #000;
+          cursor: pointer;
+          font-family: $primary-font;
+          &:hover {
+            background: #000;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  // 📱 Responsive for smaller screens
+  @media (max-width: 992px) {
+    .mainproject {
+      .project-detail {
+        flex: 1 1 calc(50% - 15px); // 2 in a row
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .mainproject {
+      .project-detail {
+        flex: 1 1 100%; // 1 in a row on mobile
+      }
+    }
+  }
+}
+
+
+
+// slog scss 
+#insider {
+  padding: 8% 0;
+  height: fit-content;
+
+  .container {
+    .main-insider {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      align-items: flex-start;
+
+      .projectupper {
+        width: 50%;
+        height: 500px;
+
+        img {
+          width: 100%;
+          height: 500px;
+          object-fit: cover;
+          border-radius: 15px;
+          transition: opacity 0.4s ease;
+
+          &.contain-fit {
+            object-fit: contain;
+            background-color: #000; // keeps space behind mobile image neat
+            padding: 10px; // small padding for tall images
+          }
+        }
+      }
+
+      .projectdown {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 80px;
+
+        .titels {
+          h1 {
+            font-size: 5rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #000;
+            font-family: $secondary-font;
+          }
+
+          p {
+            font-size: 2.3rem;
+            color: #000;
+            margin: 0;
+            font-family: $primary-font;
+          }
+        }
+
+        .imges {
+          display: flex;
+          gap: 40px;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+
+          img {
+            border: 1px solid black;
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+              transform: scale(1.1);
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+              border-color: #fff;
+            }
+          }
+        }
+
+        button {
+          margin-top: 25px;
+          padding: 10px 25px;
+          background: linear-gradient(90deg, #6a11cb, #2575fc);
+          color: #fff;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          font-size: 1.5rem;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+          &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  #insider .main-insider {
+    flex-direction: column;
+    .projectdown {
+      align-items: center;
+      text-align: center;
+      .imges {
+        justify-content: center;
+      }
+    }
+  }
 }
