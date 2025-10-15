@@ -15,7 +15,7 @@ const projectData = [
     title: "Blue Bug DA",
     des: "Digital Agency",
     imgsrc: "./da.png",
-    liveLink: "#", 
+    liveLink: "https://SrijeshBista.github.io/bluebugda", 
   },
   {
     slug: "Yuma",

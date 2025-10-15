@@ -2,34 +2,37 @@
   padding-top: 8%;
   padding-bottom: 3%;
   height: fit-content;
-  .titles{
+
+  .titles {
     font-size: 2.8rem;
-    h1{
-        margin: 0;
-        margin-bottom: 10px;
-        font-family: $secondary-font;
+    h1 {
+      margin: 0;
+      margin-bottom: 10px;
+      font-family: $secondary-font;
     }
   }
+
   .mainproject {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 30px;
     width: 100%;
+
     a {
       text-decoration: none;
     }
-    .project-detail {
-      width: calc(28.333% - 20px); // 3 per row with gap
 
+    .project-detail {
+      width: calc(28.333% - 20px);
       border: 1px solid black;
       border-radius: 16px;
       overflow: hidden;
       transition: all 0.3s ease;
-
       cursor: pointer;
       padding: 20px;
       text-align: center;
+      background: #fff;
 
       &:hover {
         transform: translateY(-8px);
@@ -47,16 +50,15 @@
           height: 260px;
           object-fit: cover;
           border-radius: 12px;
+          transition: transform 0.3s ease;
         }
 
         .project-title {
           font-size: 2.5rem;
-          font-weight: 600;
-          margin-top: 8px;
+          font-weight: 700;
           margin: 0;
           color: #000;
           font-family: $primary-font;
-          font-weight: 700;
         }
 
         .project-des {
@@ -74,9 +76,9 @@
           font-weight: 600;
           margin-top: 10px;
           transition: all 400ms ease-in-out;
-          color: #000;
-          cursor: pointer;
           font-family: $primary-font;
+          cursor: pointer;
+
           &:hover {
             background: #000;
             color: #fff;
@@ -86,11 +88,10 @@
     }
   }
 
-  // 📱 Responsive for smaller screens
   @media (max-width: 992px) {
     .mainproject {
       .project-detail {
-        flex: 1 1 calc(50% - 15px); // 2 in a row
+        flex: 1 1 calc(50% - 15px);
       }
     }
   }
@@ -98,15 +99,13 @@
   @media (max-width: 600px) {
     .mainproject {
       .project-detail {
-        flex: 1 1 100%; // 1 in a row on mobile
+        flex: 1 1 100%;
       }
     }
   }
 }
 
-
-
-// slog scss 
+// 🔹 PROJECT DETAIL (SLUG PAGE)
 #insider {
   padding: 8% 0;
   height: fit-content;
@@ -121,18 +120,34 @@
       .projectupper {
         width: 50%;
         height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f8f8f8;
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
 
         img {
           width: 100%;
-          height: 500px;
-          object-fit: cover;
-          border-radius: 15px;
-          transition: opacity 0.4s ease;
+          height: 100%;
+          transition: opacity 0.4s ease, transform 0.4s ease;
+          opacity: 1;
+
+          // ✅ Animation effect for smooth image switching
+          &.fade-enter {
+            opacity: 0;
+            transform: scale(1.03);
+          }
+
+          &.cover-fit {
+            object-fit: cover;
+          }
 
           &.contain-fit {
             object-fit: contain;
-            background-color: #000; // keeps space behind mobile image neat
-            padding: 10px; // small padding for tall images
+            background-color: #000;
+            padding: 10px;
           }
         }
       }
@@ -174,12 +189,22 @@
             object-fit: cover;
             border-radius: 8px;
             cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+            opacity: 0.8;
 
             &:hover {
               transform: scale(1.1);
               box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
               border-color: #fff;
+              opacity: 1;
+            }
+
+            // ✅ Active thumbnail styling
+            &.active {
+              border: 2px solid #2575fc;
+              box-shadow: 0 0 15px rgba(37, 117, 252, 0.6);
+              transform: scale(1.08);
+              opacity: 1;
             }
           }
         }
@@ -203,18 +228,36 @@
       }
     }
   }
-}
 
-
-/* Responsive for smaller screens */
-@media (max-width: 768px) {
-  #insider .main-insider {
-    flex-direction: column;
-    .projectdown {
+  @media (max-width: 900px) {
+    .main-insider {
+      flex-direction: column;
       align-items: center;
-      text-align: center;
-      .imges {
-        justify-content: center;
+
+      .projectupper,
+      .projectdown {
+        width: 100%;
+      }
+
+      .projectupper {
+        height: 350px;
+      }
+
+      .projectdown {
+        text-align: center;
+        align-items: center;
+
+        .imges {
+          justify-content: center;
+        }
+
+        h1 {
+          font-size: 3rem;
+        }
+
+        p {
+          font-size: 1.6rem;
+        }
       }
     }
   }

@@ -48,7 +48,7 @@ const Project = () => {
               <div className="card-btn">
                 <button>
                   {" "}
-                  <a href="#" target="_blank" rel="noopener noreferrer">
+                  <a href="https://SrijeshBista.github.io/bluebugda" target="_blank" rel="noopener noreferrer">
                     See Live{" "}
                   </a>
                   <div className="arrow-wrapper">
