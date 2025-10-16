@@ -21,7 +21,7 @@
    
     .banner-left {
       width: 55%;
-    //   z-index: 2;
+      //   z-index: 2;
       .Name {
         h1 {
           font-size: 2.5rem;
@@ -46,4 +46,181 @@
       }
     }
   }
+}
+  
+// responsive for mobile
+@media screen and (max-width:575.5px) {
+   #banner{
+    width: 100%;
+    padding-top: 25%;
+    height: fit-content;
+    .banner-main{
+      flex-direction: column;
+      height: fit-content;
+      // width: 96%;
+      // padding: 5px;
+      .banner-left{
+        width: 100%;
+        .Name{
+          h1{
+            font-size: 2rem;
+            // margin: 0;
+          }
+        }
+        .Profession{
+          h1{
+            font-size: 2.5rem;
+            margin: 15px 0;
+          }
+        }
+      }
+      .banner-right{
+        width: 100%;
+        margin-left: -40px;
+        img{
+        }
+      }
+    }
+   }
+}
+@media screen and (max-width:382.5px) {
+   #banner{
+    width: 100%;
+    padding-top: 30%;
+    height: fit-content;
+    .banner-main{
+      flex-direction: column;
+      height: fit-content;
+      // width: 96%;
+      // padding: 5px;
+      .banner-left{
+        width: 100%;
+        .Name{
+          h1{
+            font-size: 1.5rem;
+            // margin: 0;
+          }
+        }
+        .Profession{
+          h1{
+            font-size: 1.5rem;
+            margin: 15px 0;
+          }
+        }
+      }
+      .banner-right{
+        width: 100%;
+        margin-left: -40px;
+        img{
+        }
+      }
+    }
+   }
+}
+// responsive for tab
+@media screen and (min-width:680px) and (max-width:900px) {
+  #banner{
+    padding-top: 17%;
+    .banner-main{
+      flex-direction: column;
+      height: fit-content;
+      .banner-left{
+        width: 100%;
+        .Name{
+          h1{
+            font-size: 2.1rem;
+          }
+        }
+        .Profession{
+          h1{
+            font-size: 4rem;
+          }
+        }
+      }
+      .banner-right{
+        width: 70%;
+      }
+    }
+  }
+}
+@media screen and (min-width:575.5px) and (max-width:680px)  {
+ #banner{
+    padding-top: 20%;
+    .banner-main{
+      flex-direction: column;
+      height: fit-content;
+      .banner-left{
+        width: 100%;
+        .Name{
+          h1{
+            font-size: 2.1rem;
+          }
+        }
+        .Profession{
+          h1{
+            font-size: 4rem;
+          }
+        }
+      }
+      .banner-right{
+        width: 70%;
+      }
+    }
+  }
+
+}
+//responsive for laptops
+@media screen and (min-width:900px) and (max-width:1200px)  {
+#banner{
+  padding-top: 12%;
+  .banner-main{
+    height: fit-content;
+    .banner-left{
+      width: 60%;
+      .Name{
+        h1{
+          font-size: 2rem;
+        }
+      }
+      .Profession{
+        h1{
+          font-size: 4rem;
+        }
+      }
+    }
+    .banner-right{
+      width: 40%;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+}
+@media screen and (min-width:1200px) and (max-width:1410px)  {
+#banner{
+  padding-top: 9%;
+  .banner-main{
+    height: fit-content;
+    .banner-left{
+      width: 60%;
+      .Name{
+        h1{
+          font-size: 2.5rem;
+        }
+      }
+      .Profession{
+        h1{
+          font-size: 4.5rem;
+        }
+      }
+    }
+    .banner-right{
+      width: 40%;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
 }

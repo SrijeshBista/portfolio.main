@@ -17,3 +17,17 @@
 
     }
 }
+// responsive for mobile
+@media screen and (max-width: 575.98px) {
+    #expalin{
+        height: fit-content;
+        .main{
+            flex-direction: column;
+            font-size: 2rem;
+            align-items: center;
+            .upper-part{
+                font-size:1rem;
+            }
+        }
+    }
+}

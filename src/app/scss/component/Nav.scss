@@ -250,3 +250,26 @@ header {
     }
   }
 }
+
+
+// responsive for mobile 
+@media screen and (max-width:575.98px) {
+  // navbar
+  header{
+    mar
+    nav{
+      .nav-main{
+        .logo{
+          width: 60px;
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  // sidenav
+  #sidebar{
+    display: none;
+  }
+}
