@@ -3,12 +3,13 @@
     width: 95%;
 }
 body {
-    color: #000000;
+  color: #000000;
     background-color: #fff;
     scroll-behavior: smooth;
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
+    font-family: $primary-font;
 }
 .nav-container{
     width: 90%;
@@ -19,4 +20,7 @@ section{
 }
 .padding{
     padding: 50px 0;
+}
+h1, h2, h3 {
+    font-family: $secondary-font;
 }

@@ -19,7 +19,7 @@ const projectData = [
     title: "Blue Bug DA",
     des: "Digital Agency",
     imgsrc: "/da.png",
-    liveLink: "https://SrijeshBista.github.io/bluebugda",
+    liveLink: "https://bluebugda.vercel.app",
     imgsecond: "/laptopmainda.png",
     imgthird: "/laptoptest.png",
     imgfourth: "/mobileda.png",
