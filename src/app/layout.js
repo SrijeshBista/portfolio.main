@@ -1,16 +1,17 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Orbitron } from "next/font/google";
 import "./globals.css";
-import ClientLayout from "./clintelayout"; // ✅ Import client wrapper
+import ClientLayout from "./clintelayout";
 import Nav from "./component/Nav";
 import Footer from './component/Footer';
 import './scss/style.scss';
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+
+const interFont = Inter({
+  variable: "--font-primary",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const orbitronFont = Orbitron({
+  variable: "--font-secondary",
   subsets: ["latin"],
 });
 
@@ -22,9 +23,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${interFont.variable} ${orbitronFont.variable}`}>
         <Nav />
-        <ClientLayout>{children}</ClientLayout> {/* ✅ AOS active everywhere */}
+        <ClientLayout>{children}</ClientLayout>
         <Footer/>
       </body>
     </html>
