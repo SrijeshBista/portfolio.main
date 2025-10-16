@@ -121,73 +121,236 @@
     float: right;
     margin-right: 30px;
     margin-top: 10px;
-    a{
-        color: #000;
-        text-decoration: none;
+    a {
+      color: #000;
+      text-decoration: none;
     }
-    /* From Uiverse.io by vinodjangid07 */ 
-.readmore-btn {
-  width: fit-contentd;
-  height: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  background-color: rgb(186, 125, 255);
-  border: none;
-  border-radius: 10px;
-  padding: 0px 15px;
-  gap: 0px;
-  transition: all 0.4s;
-}
-.book-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  position: relative;
-  width: 45px;
-  height: 100%;
-}
-.book-wrapper .book-page {
-  width: 50%;
-  height: auto;
-  position: absolute;
-}
-.readmore-btn:hover .book-page {
-  animation: paging 0.4s linear infinite;
-  transform-origin: left;
-}
-.readmore-btn:hover {
-  background-color: rgb(159, 74, 255);
-}
-@keyframes paging {
-  0% {
-    transform: rotateY(0deg) skewY(0deg);
+    /* From Uiverse.io by vinodjangid07 */
+    .readmore-btn {
+      width: fit-contentd;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background-color: rgb(186, 125, 255);
+      border: none;
+      border-radius: 10px;
+      padding: 0px 15px;
+      gap: 0px;
+      transition: all 0.4s;
+    }
+    .book-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      position: relative;
+      width: 45px;
+      height: 100%;
+    }
+    .book-wrapper .book-page {
+      width: 50%;
+      height: auto;
+      position: absolute;
+    }
+    .readmore-btn:hover .book-page {
+      animation: paging 0.4s linear infinite;
+      transform-origin: left;
+    }
+    .readmore-btn:hover {
+      background-color: rgb(159, 74, 255);
+    }
+    @keyframes paging {
+      0% {
+        transform: rotateY(0deg) skewY(0deg);
+      }
+      50% {
+        transform: rotateY(90deg) skewY(-20deg);
+      }
+      100% {
+        transform: rotateY(180deg) skewY(0deg);
+      }
+    }
+    .text {
+      width: 105px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 15px;
+      color: rgb(255, 255, 255);
+    }
   }
-  50% {
-    transform: rotateY(90deg) skewY(-20deg);
-  }
-  100% {
-    transform: rotateY(180deg) skewY(0deg);
+}
+// responsive for mobile
+@media screen and (max-width: 382.5px) {
+  #Project {
+    height: fit-content;
+    .title {
+      h1 {
+        font-size: 1.3rem;
+      }
+    }
+    .project-main {
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 5px 15px;
+      width: 100%;
+      .card-main {
+        width: 100%;
+        .card-img {
+          width: 100%;
+          img {
+            width: 100%;
+            height: 200px;
+          }
+        }
+        .card-title {
+          h1 {
+            font-size: 0.4rem;
+          }
+        }
+        .card-des {
+          p {
+            font-size: 0.3rem;
+          }
+        }
+      }
+    }
   }
 }
-.text {
-  width: 105px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  font-size: 15px;
-  color: rgb(255, 255, 255);
+@media screen and (max-width: 482.5px) {
+  #Project {
+    height: fit-content;
+    .title {
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+    .project-main {
+      gap: 10px;
+      flex-wrap: wrap;
+      width: 90%;
+      .card-main {
+        width: 100%;
+        .card-title {
+          h1 {
+            font-size: 2rem;
+          }
+        }
+        .card-des {
+          p {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
 }
-
-    
-
-    
-
-    
-
-    
+@media screen and (min-width: 482.5px)  and (max-width: 575.98px) {
+  #Project {
+    height: fit-content;
+    .title {
+      h1 {
+        font-size: 1.9rem;
+      }
+    }
+    .project-main {
+      gap: 10px;
+      flex-wrap: wrap;
+      width: 90%;
+      .card-main {
+        width: 100%;
+         .card-img {
+          img {
+            width: 100%;
+            height: 200px;
+          }
+        }
+        .card-title {
+          h1 {
+            font-size: 2.4rem;
+          }
+        }
+        .card-des {
+          p {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+//responsive for tab
+@media screen and (min-width: 575.5px) and (max-width: 900px) {
+  #Project {
+    height: fit-content;
+    .title {
+      h1 {
+        font-size: 1.9rem;
+      }
+    }
+    .project-main {
+      gap: 10px;
+      flex-wrap: wrap;
+      width: 95%;
+      padding: 5px 10px;
+      .card-main {
+        width: calc(45% - 10px);
+        .card-img {
+          img {
+            width: 100%;
+            height: 200px;
+          }
+        }
+        .card-title {
+          h1 {
+            font-size: 1.6rem;
+          }
+        }
+        .card-des {
+          p {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+}
+//responsive for laptops
+@media screen and (min-width: 900px) and (max-width: 1400px) {
+  #Project {
+    height: fit-content;
+    .title {
+      h1 {
+        font-size: 1.9rem;
+      }
+    }
+    .project-main {
+      gap: 10px;
+      flex-wrap: wrap;
+      width: 95%;
+      padding: 5px 10px;
+      .card-main {
+        width: calc(30% - 10px);
+        .card-img {
+          img {
+            width: 100%;
+            height: 300px;
+          }
+        }
+        .card-title {
+          h1 {
+            font-size: 2rem;
+          }
+        }
+        .card-des {
+          p {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
   }
 }

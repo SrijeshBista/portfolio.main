@@ -4,7 +4,7 @@ import React from "react";
 const WhatIDo = () => {
   return (
     <section id="expalin">
-      <div className="padding">
+      {/* <div className="padding"> */}
         <div className="container">
           <div className="main">
             <div className="upper-part" data-aos="fade-right">
@@ -21,7 +21,7 @@ const WhatIDo = () => {
             </div>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </section>
   );
 };

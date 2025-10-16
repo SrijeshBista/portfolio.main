@@ -25,7 +25,7 @@
       justify-content: center;
       align-items: center;
       display: flex;
-      p{
+      p {
         margin-right: 10px;
         font-size: 20px;
       }
@@ -33,10 +33,181 @@
         button {
           border: none;
           background: transparent;
-          a{
+          a {
             font-size: 30px;
             color: #000;
             cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+// responsive for mobile
+@media screen and (max-width: 382.5px) {
+  #contact {
+    height: fit-content;
+    .contact-main {
+      height: fit-content;
+      padding: 5px 10px;
+      .text {
+        width: 100%;
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+      .icon {
+        p {
+          margin-right: 0px;
+          font-size: 14px;
+        }
+        .social-media {
+          button {
+            a {
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 382.5px) and (max-width: 482.5px) {
+  #contact {
+    height: fit-content;
+    .contact-main {
+      height: fit-content;
+      padding: 5px 10px;
+      .text {
+        width: 100%;
+        h1 {
+          font-size: 3rem;
+        }
+      }
+      .icon {
+        p {
+          margin-right: 0px;
+          font-size: 14px;
+        }
+        .social-media {
+          button {
+            a {
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 482.5px) and (max-width: 575.98px) {
+  #contact {
+    height: fit-content;
+    .contact-main {
+      height: fit-content;
+      padding: 5px 10px;
+      .text {
+        width: 100%;
+        h1 {
+          font-size: 3.5rem;
+        }
+      }
+      .icon {
+        p {
+          margin-right: 0px;
+          font-size: 14px;
+        }
+        .social-media {
+          button {
+            a {
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//responsive for tab
+@media screen and (min-width: 575.5px) and (max-width: 900px) {
+  #contact {
+    height: fit-content;
+    .contact-main {
+      height: fit-content;
+      padding: 5px 10px;
+      .text {
+        width: 100%;
+        h1 {
+          font-size: 5.5rem;
+        }
+      }
+      .icon {
+        p {
+          margin-right: 0px;
+          font-size: 14px;
+        }
+        .social-media {
+          button {
+            a {
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//responsive for laptops
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  #contact {
+    height: fit-content;
+    .contact-main {
+      height: fit-content;
+      padding: 5px 10px;
+      .text {
+        width: 100%;
+        h1 {
+          font-size: 6.5rem;
+        }
+      }
+      .icon {
+        p {
+          margin-right: 0px;
+          font-size: 14px;
+        }
+        .social-media {
+          button {
+            a {
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  #contact {
+    height: fit-content;
+    .contact-main {
+      // height: fit-content;
+      padding: 10px 20px;
+      .text {
+        width: 60%;
+        h1 {
+          font-size: 6rem;
+        }
+      }
+      .icon {
+        p {
+          margin-right: 0px;
+          font-size: 14px;
+        }
+        .social-media {
+          button {
+            a {
+              font-size: 25px;
+            }
           }
         }
       }

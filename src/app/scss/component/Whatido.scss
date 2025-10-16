@@ -1,33 +1,128 @@
-#expalin{
-    height: fit-content;
-    .main{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 5.5rem;
-        .upper-part{
-            font-size: 2rem;
-        }
-        h1{
-            margin: 10px 0;
-            font-family: $secondary-font;
-            font-weight: 800;
-        }
-
+#expalin {
+  height: fit-content;
+  padding-top: 40px;
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 5.5rem;
+    .upper-part {
+      font-size: 2rem;
     }
+    h1 {
+      margin: 10px 0;
+      font-family: $secondary-font;
+      font-weight: 800;
+    }
+  }
 }
 // responsive for mobile
 @media screen and (max-width: 575.98px) {
-    #expalin{
-        height: fit-content;
-        .main{
-            flex-direction: column;
-            font-size: 2rem;
-            align-items: center;
-            .upper-part{
-                font-size:1rem;
-            }
-        }
+  #expalin {
+    height: fit-content;
+    .main {
+      flex-direction: column;
+      font-size: 2rem;
+      align-items: center;
+      .upper-part {
+        font-size: 1rem;
+      }
     }
+  }
+}
+@media screen and (max-width: 382.5px) {
+  #expalin {
+    height: fit-content;
+    .main {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        font-size: 42px;
+      }
+      .upper-part {
+        font-size: 17px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 482.5px) {
+  #expalin {
+    height: fit-content;
+    .main {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      .upper-part {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+//responsive for tab
+@media screen and (min-width: 680px) and (max-width: 900px) {
+     #expalin {
+    height: fit-content;
+    .main {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        font-size: 4rem;
+      }
+      .upper-part {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+@media screen and (min-width: 575.5px) and (max-width: 680px) {
+     #expalin {
+    height: fit-content;
+    .main {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        font-size: 4rem;
+      }
+      .upper-part {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+//responsive for laptops
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+     #expalin {
+    height: fit-content;
+    .main {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        font-size: 5.5rem;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1410px) {
+     #expalin {
+    height: fit-content;
+    .main {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        font-size: 5.5rem;
+      }
+    }
+  }
 }

@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  color: #fff;  
+  color: #fff;
   width: 100%;
   padding: 20px 0px;
   height: fit-content;
@@ -20,19 +20,18 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     // border: 1px solid rgba(255, 255, 255, 0.3);
-       overflow-x: hidden;
-       height: 75vh;
-    .left-side{
+    overflow-x: hidden;
+    height: 75vh;
+    .left-side {
       width: 50%;
-      h1{
+      h1 {
         font-family: $secondary-font;
         font-size: 4.5rem;
       }
-
     }
-    .right-side{
+    .right-side {
       width: 60%;
-       .infinite-scroll-container {
+      .infinite-scroll-container {
         width: 100vw;
         // margin-top: 20px;
         overflow: hidden;
@@ -43,31 +42,31 @@
           position: relative;
           display: flex;
         }
-  
+
         .logo-container {
           display: flex;
           animation: scroll 20s linear infinite;
-          .flexs{
+          .flexs {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
           }
-   p {
-        font-size: 18px;
-        font-weight: 600;
-        margin-top: 8px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-family: $primary-font;
-      }
+          p {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: $primary-font;
+          }
           img {
-          width: 250px;   // increased from 200px wide logos with proper height ratio
-        height: 130px;   // taller logo height for better visibility
-        margin: 0 10px; 
-        object-fit: contain;
+            width: 250px; // increased from 200px wide logos with proper height ratio
+            height: 130px; // taller logo height for better visibility
+            margin: 0 10px;
+            object-fit: contain;
             border-radius: 25px;
-        transition: transform 0.3s ease;
+            transition: transform 0.3s ease;
             @media (max-width: 768px) {
               width: 100px;
               margin-top: 10px;
@@ -79,9 +78,152 @@
         0% {
           transform: translateX(0);
         }
-  
+
         100% {
           transform: translateX(-100%);
+        }
+      }
+    }
+  }
+}
+// responsive for mobile
+@media screen and (max-width: 382.5px) {
+  #Techiwork {
+    width: 100%;
+    height: fit-content;
+    .techmain {
+      flex-direction: column;
+      height: fit-content;
+      margin: 5px 10px;
+      padding: 5px 10px;
+      .left-side {
+        width: 100%;
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+      .right-side {
+        width: 100%;
+        .infinite-scroll-container {
+          .logo-container {
+            img {
+              width: 140px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 482.5px) {
+  #Techiwork {
+    width: 100%;
+    height: fit-content;
+    .techmain {
+      flex-direction: column;
+      height: fit-content;
+      margin: 5px 10px;
+      padding: 5px 10px;
+      .left-side {
+        width: 100%;
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+      .right-side {
+        width: 100%;
+        .infinite-scroll-container {
+          .logo-container {
+            img {
+              width: 120px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 575.98px) {
+  #Techiwork {
+    width: 100%;
+    height: fit-content;
+    .techmain {
+      flex-direction: column;
+      height: fit-content;
+      margin: 5px 10px;
+      padding: 5px 10px;
+      .left-side {
+        width: 100%;
+        h1 {
+          font-size: 2.2rem;
+        }
+      }
+      .right-side {
+        width: 100%;
+        .infinite-scroll-container {
+          .logo-container {
+            img {
+              width: 120px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//responsive for tab
+@media screen and (min-width: 575.5px) and (max-width: 900px) {
+  #Techiwork {
+    width: 100%;
+    height: fit-content;
+    .techmain {
+      flex-direction: column;
+      height: fit-content;
+      margin: 5px 10px;
+      padding: 5px 10px;
+      .left-side {
+        width: 100%;
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+      .right-side {
+        width: 100%;
+        .infinite-scroll-container {
+          .logo-container {
+            img {
+              width: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//responsive for laptops
+@media screen and (min-width: 900px) and (max-width: 1410px) {
+  #Techiwork {
+    width: 100%;
+    height: fit-content;
+    .techmain {
+      flex-direction: row;
+      // height: fit-content;
+      margin: 5px 10px;
+      padding: 5px 10px;
+      .left-side {
+        width: 40%;
+        h1 {
+          font-size: 3.5rem;
+        }
+      }
+      .right-side {
+        width: 50%;
+        .infinite-scroll-container {
+          .logo-container {
+            img {
+              width: 200px;
+            }
+          }
         }
       }
     }

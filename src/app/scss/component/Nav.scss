@@ -25,8 +25,8 @@ header {
         gap: 50px;
 
         .nav-btn {
-          button{
-            a{
+          button {
+            a {
               color: #fff;
               text-decoration: none;
             }
@@ -35,7 +35,7 @@ header {
             width: 175px;
             height: 45px;
             background: linear-gradient(to top, #00154c, #12376e, #23487f);
-          
+
             border-radius: 50px;
             border: none;
             cursor: pointer;
@@ -251,25 +251,91 @@ header {
   }
 }
 
+// responsive for mobile
 
-// responsive for mobile 
-@media screen and (max-width:575.98px) {
-  // navbar
-  header{
-    mar
-    nav{
-      .nav-main{
-        .logo{
+// responsive for mobile
+@media screen and (max-width: 382.5px) {
+  header {
+     nav {
+      .nav-main {
+        .logo {
           width: 60px;
-          img{
+          img {
             width: 100%;
+          }
+        }
+        .hamburger {
+          .nav-btn {
+            .btn {
+              width: 120px;
+              span{
+                font-size: 11px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .nav-inside{
+    ul{
+      margin-top: 2%;
+      li{
+        margin: 10px 20px;
+        a{
+          font-size:3rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 382.5px) and (max-width: 482.5px) {
+  header {
+     nav {
+      .nav-main {
+        .logo {
+          width: 60px;
+          img {
+            width: 100%;
+          }
+        }
+        .hamburger {
+          .nav-btn {
+            .btn {
+              width: 120px;
+              span{
+                font-size: 11px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 482.5px) and (max-width: 575.98px) {
+  // navbar
+  header {
+    mar nav {
+      .nav-main {
+        .logo {
+          width: 60px;
+          img {
+            width: 100%;
+          }
+        }
+        .hamburger {
+          .nav-btn {
+            .btn {
+            }
           }
         }
       }
     }
   }
   // sidenav
-  #sidebar{
+  #sidebar {
     display: none;
   }
 }
+
