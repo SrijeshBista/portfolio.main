@@ -24,3 +24,7 @@ section{
 h1, h2, h3 {
     font-family: $secondary-font; /* Apply secondary font */
 }
+html, body {
+  width: 100%;
+  overflow-x: hidden; // ✅ prevents horizontal scroll
+}

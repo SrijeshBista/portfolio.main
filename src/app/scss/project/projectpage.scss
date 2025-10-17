@@ -235,14 +235,15 @@
 
         }
         .project-title{
-          
-            font-size: 1rem  !important;
-
-          
+            font-size: 2rem !important ;
+        }
+        .project-des{
+          font-size: 1rem !important;
         }
       }
     }
   }
+ 
 
 }
 @media screen and (min-width: 382.5px)  and (max-width: 482.5px) {
@@ -289,6 +290,11 @@
         width: calc(40% - 10px);
       }
     }
+    .card-content{
+      .project-title{
+        font-size: 2rem !important;
+      }
+    }
   }
 
 }
@@ -306,7 +312,169 @@
         width: calc(40% - 10px);
       }
     }
+     .card-content{
+      .project-title{
+        font-size: 2rem !important;
+      }
+    }
   }
+}
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+   // product page 
+  #project-page{
+    padding-top: 20%;
+    .titles{
+      font-size: 2rem;
+    }
+    .mainproject{
+      width: 100%;
+      .project-detail{
+        width: calc(40% - 10px);
+      }
+    }
+     .card-content{
+      .project-title{
+        font-size: 2rem !important;
+      }
+    }
+  }
+}
 
+// insider 
+@media screen and (max-width: 575.98px) {
+  #insider {
+    padding-top: 26%;
 
+    .container {
+      .main-insider {
+        flex-direction: column;
+        gap: 25px;
+
+        .projectupper {
+          width: 100%;
+          height: 300px;
+        }
+
+        .projectdown {
+          width: 100%;
+          gap: 40px;
+
+          .titels {
+            h1 {
+              font-size: 2.4rem;
+            }
+            p {
+              font-size: 1.3rem;
+            }
+          }
+
+          .imges img {
+            width: 70px;
+            height: 70px;
+          }
+
+          button {
+            font-size: 1.2rem;
+            padding: 8px 18px;
+          }
+        }
+      }
+    }
+  }
+}
+/* 📲 Tablet (576px – 767.98px) */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  #insider {
+    padding-top: 17%;
+    .container {
+      .main-insider {
+        flex-direction: column;
+        gap: 30px;
+
+        .projectupper {
+          width: 100%;
+          height: 400px;
+        }
+
+        .projectdown {
+          width: 100%;
+
+          .titels h1 {
+            font-size: 3rem;
+          }
+          .titels p {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}
+/* 💻 Small Laptop (768px – 991.98px) */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  #insider {
+    padding-top: 14%;
+    .container {
+      .main-insider {
+        flex-direction: row;
+        gap: 25px;
+
+        .projectupper {
+          width: 50%;
+          height: 400px;
+        }
+
+        .projectdown {
+          width: 50%;
+          gap: 50px;
+
+          .titels h1 {
+            font-size: 3rem;
+          }
+          .titels p {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+/* 🖥️ Desktop (992px – 1199.98px) */
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+  #insider {
+    padding-top: 12%;
+    .container {
+      .main-insider {
+        .projectupper {
+          height: 450px;
+        }
+
+        .projectdown {
+          .titels h1 {
+            font-size: 4rem;
+          }
+          .titels p {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+/* 🖲️ Extra Large Screens (1200px and above) */
+@media screen and (min-width: 1200px) {
+  #insider {
+    padding-top: 9%;
+    .container {
+      .main-insider {
+        gap: 50px;
+        .projectupper {
+          height: 500px;
+        }
+        .projectdown .titels h1 {
+          font-size: 5rem;
+        }
+      }
+    }
+  }
 }
