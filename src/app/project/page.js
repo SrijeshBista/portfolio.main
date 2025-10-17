@@ -1,21 +1,21 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-
+import Loader from "../component/Loding";
 const projectData = [
   {
     slug: "BlackDiamond",
     title: "Black Diamond",
     des: "E-commerce Salon Website",
     imgsrc: "./blackdimond.png",
-    liveLink: "https://blackdiamondsalon.com/", 
+    liveLink: "https://blackdiamondsalon.com/",
   },
   {
     slug: "BlueBugDA",
     title: "Blue Bug DA",
     des: "Digital Agency",
     imgsrc: "./da.png",
-    liveLink: "https://bluebugda.vercel.app", 
+    liveLink: "https://bluebugda.vercel.app",
   },
   {
     slug: "Yuma",
@@ -27,6 +27,15 @@ const projectData = [
 ];
 
 const ProjectPage = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1500); // loader duration
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) return <Loader />;
+
   return (
     <section id="project-page">
       <div className="container">
@@ -45,12 +54,11 @@ const ProjectPage = () => {
                 <h1 className="project-title">{project.title}</h1>
                 <p className="project-des">{project.des}</p>
 
-                {/* ✅ Button that goes to live project */}
                 <button
                   className="project-btn"
                   onClick={(e) => {
-                    e.preventDefault(); // stop card link click
-                    window.open(project.liveLink, "_blank"); // open live site
+                    e.preventDefault();
+                    window.open(project.liveLink, "_blank");
                   }}
                 >
                   Live Project

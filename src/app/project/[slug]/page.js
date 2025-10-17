@@ -1,7 +1,7 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
-
+import Loader from "@/app/component/Loding";
 const projectData = [
   {
     slug: "BlackDiamond",
@@ -44,6 +44,14 @@ const Page = () => {
 
   const [mainImage, setMainImage] = useState(project?.imgsrc);
   const [activeImage, setActiveImage] = useState(project?.imgsrc);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1500); // loader duration
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) return <Loader />;
 
   if (!project) return <h1>Project Not Found</h1>;
 
@@ -70,7 +78,7 @@ const Page = () => {
               <p>{project.des}</p>
             </div>
 
-            {/* Thumbnails (Now includes first image) */}
+            {/* Thumbnails */}
             <div className="imges">
               {[project.imgsrc, project.imgsecond, project.imgthird, project.imgfourth, project.imgfifth].map(
                 (img, index) => (
