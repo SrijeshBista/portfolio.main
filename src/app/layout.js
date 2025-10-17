@@ -1,7 +1,5 @@
 import { Inter, Orbitron } from "next/font/google";
 import "./globals.css";
-import Nav from "./component/Nav";
-import Footer from "./component/Footer";
 import ClientLayout from "./clintelayout";
 import './scss/style.scss';
 import Head from "next/head";
@@ -29,9 +27,12 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
       </Head>
       <body className={`${interFont.variable} ${orbitronFont.variable}`}>
-        <Nav />
-        <ClientLayout>{children}</ClientLayout>
-        <Footer />
+        {/* Move Nav and Footer inside ClientLayout */}
+        <ClientLayout>
+          <Nav />
+          {children}
+          <Footer />
+        </ClientLayout>
       </body>
     </html>
   );
