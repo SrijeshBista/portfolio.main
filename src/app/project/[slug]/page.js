@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
-import Loader from "@/app/component/Loding";
+// import Loader from "@/app/component/Loding";
 const projectData = [
   {
     slug: "BlackDiamond",
@@ -44,16 +44,16 @@ const Page = () => {
 
   const [mainImage, setMainImage] = useState(project?.imgsrc);
   const [activeImage, setActiveImage] = useState(project?.imgsrc);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1500); // loader duration
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => setLoading(false), 1500); // loader duration
+  //   return () => clearTimeout(timer);
+  // }, []);
 
-  if (loading) return <Loader />;
+  // if (loading) return <Loader />;
 
-  if (!project) return <h1>Project Not Found</h1>;
+  // if (!project) return <h1>Project Not Found</h1>;
 
   const isMobileOrTab =
     mainImage === project.imgfourth || mainImage === project.imgfifth;
