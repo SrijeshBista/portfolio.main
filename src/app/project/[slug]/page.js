@@ -6,7 +6,7 @@ const projectData = [
   {
     slug: "BlackDiamond",
     title: "Black Diamond",
-    des: "E-commerce Salon Website",
+    des: "E-commerce Salon Website using PHP ",
     imgsrc: "/blackdimond.png",
     imgsecond: "/aboutusbd.png",
     imgthird: "/bdsecondpic.png",
@@ -17,7 +17,7 @@ const projectData = [
   {
     slug: "BlueBugDA",
     title: "Blue Bug DA",
-    des: "Digital Agency",
+    des: "Digital Agency using Next.js",
     imgsrc: "/da.png",
     liveLink: "https://bluebugda.vercel.app",
     imgsecond: "/laptopmainda.png",
@@ -28,7 +28,7 @@ const projectData = [
   {
     slug: "Yuma",
     title: "Yuma",
-    des: "E-commerce Clothing Website",
+    des: "E-commerce Clothing Website Using React",
     imgsrc: "/yuma.png",
     imgsecond: "/homeyuma.png",
     imgthird: "/aboutyuma.png",

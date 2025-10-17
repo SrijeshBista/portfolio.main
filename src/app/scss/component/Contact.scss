@@ -30,16 +30,38 @@
         font-size: 20px;
       }
       .social-media {
-        button {
-          border: none;
-          background: transparent;
-          a {
-            font-size: 30px;
-            color: #000;
-            cursor: pointer;
-          }
-        }
-      }
+  button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 30px;
+
+    a {
+      text-decoration: none;
+    }
+
+    &.git a {
+      color: #181717; // GitHub
+    }
+
+    &.mail a {
+      color: #D14836; // Email / Gmail
+    }
+
+    &.linkdin a {
+      color: #0A66C2; // LinkedIn
+    }
+    &.what a {
+      color: #25D366; // WhatsApp
+    }
+
+    &:hover a {
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+  }
+}
+
     }
   }
 }

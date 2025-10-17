@@ -30,7 +30,7 @@ const Contact = () => {
               <div className="social-media">
                 <button className="mail">
                   <a
-                    href="https://www.facebook.com/srijesh.bista/"
+                    href="https://mail.google.com/mail/u/0/#inbox?compose=new"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -50,9 +50,9 @@ const Contact = () => {
                 </button>
               </div>
               <div className="social-media">
-                <button className="ig">
+                <button className="what">
                   <a
-                    href="https://www.instagram.com/srijesh_bista_/"
+                    href="https://wa.me/9779765982888?text=Hello%20Srijesh,%20I%20want%20to%20chat%20with%20you!"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
