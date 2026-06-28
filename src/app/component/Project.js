@@ -62,10 +62,10 @@ const Project = () => {
                 <img src="./yuma.png" />
               </div>
               <div className="card-title">
-                <h1>Yuma</h1>
+                <h1>SEMS</h1>
               </div>
               <div className="card-des">
-                <p>E-commerce</p>
+                <p>System Event Management</p>
               </div>
               <div className="card-btn">
                 <button>
