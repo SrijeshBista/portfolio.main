@@ -18,11 +18,11 @@ const projectData = [
     liveLink: "https://bluebugda.vercel.app",
   },
   {
-    slug: "Yuma",
-    title: "Yuma",
-    des: "E-commerce Clothing Website",
+    slug: "SEMS",
+    title: "SEMS",
+    des: "Student Event Management Website",
     imgsrc: "./yuma.png",
-    liveLink: "https://yumanepal.com/",
+    liveLink: "https://systemeventmanagementsystem.netlify.app/html/homepage",
   },
 ];
 

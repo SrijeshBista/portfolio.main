@@ -71,7 +71,7 @@ const Project = () => {
                 <button>
                   {" "}
                   <a
-                    href="https://yumanepal.com/"
+                    href="https://systemeventmanagementsystem.netlify.app/html/homepage"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

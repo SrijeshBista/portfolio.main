@@ -26,15 +26,15 @@ const projectData = [
     imgfifth: "/tabda.png",
   },
   {
-    slug: "Yuma",
-    title: "Yuma",
-    des: "E-commerce Clothing Website Using React",
+    slug: "SEMS",
+    title: "SEMS",
+    des: "Student Event Management Website Using html, css, Js",
     imgsrc: "/yuma.png",
-    imgsecond: "/homeyuma.png",
+    imgsecond: "/yuma.png",
     imgthird: "/aboutyuma.png",
     imgfourth: "/mobileyuma.png",
     imgfifth: "/tabyuma.png",
-    liveLink: "https://yumanepal.com/",
+    liveLink: "https://systemeventmanagementsystem.netlify.app/html/homepage",
   },
 ];
 

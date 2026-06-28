@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/api/auth/(.*)",     "destination": "/api/auth/$1" },
+    { "source": "/api/projects/(.*)", "destination": "/api/projects/$1" },
+    { "source": "/api/projects",      "destination": "/api/projects/index" },
+    { "source": "/api/skills/(.*)",   "destination": "/api/skills/$1" },
+    { "source": "/api/skills",        "destination": "/api/skills/index" },
+    { "source": "/api/messages/(.*)", "destination": "/api/messages/$1" },
+    { "source": "/api/messages",      "destination": "/api/messages/index" },
+    { "source": "/api/about",         "destination": "/api/about/index" },
+    { "source": "/api/health",        "destination": "/api/health" }
+  ]
+}
